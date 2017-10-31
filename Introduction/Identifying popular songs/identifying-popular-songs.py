@@ -9,8 +9,6 @@ from sklearn.preprocessing import LabelEncoder
 data_entries = dr.get_data_entries()
 
 X_train, X_test, y_train, y_test = train_test_split(data_entries[0], data_entries[1], random_state=0)
-print(X_train[0])
-print(y_train[0])
 X_train = np.asarray(X_train)
 knn = KNeighborsClassifier(n_neighbors=1)
 np_training = np.array(X_train)
@@ -24,8 +22,6 @@ y_pred = knn.predict(X_test)
 
 track_listens_prediction = [x[1] for x in y_pred]
 track_listens_actual = [x[1] for x in y_test]
-
-print(track_listens_prediction[0])
 
 correctResults = 0
 for index in range(len(track_listens_prediction)):
