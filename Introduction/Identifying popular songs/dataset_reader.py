@@ -1,4 +1,4 @@
-import csv
+  import csv
 from sklearn import preprocessing
 
 def get_data_entries() :
@@ -13,8 +13,8 @@ def get_data_entries() :
 			data_entry = line.strip('\n').split(',')
 			a,b,c,d,e,f,g,h = data_entry
 			genres.append(e)
-			data_entries.append([a,b,c,d,h])
-			results.append([f,g])
+			data_entries.append([c,d,h,f])
+			results.append(g)
 
 	le = preprocessing.LabelEncoder()
 	genre_labels = le.fit_transform(genres)
